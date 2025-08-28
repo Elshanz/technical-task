@@ -82,6 +82,3 @@ This project follows key software engineering principles:
 - **KISS**: Keep It Simple, Stupid - straightforward, readable code
 - **DRY**: Don't Repeat Yourself - reusable components and logic
 - **YAGNI**: You Aren't Gonna Need It - focused on requirements without over-engineering
-
----
-*Technical assessment for Pasha Insurance*
