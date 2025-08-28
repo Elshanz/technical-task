@@ -70,9 +70,11 @@ dotnet test
 ## Technologies
 
 - .NET 8 Web API
+- Minimal API endpoints
 - In-memory storage (no database)
 - Clean Architecture pattern
 - HashSet optimization for performance
+- Parallel LINQ (AsParallel) for efficient filtering
 - xUnit for integration testing
 
 ## Design Principles
