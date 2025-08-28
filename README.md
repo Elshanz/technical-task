@@ -73,6 +73,7 @@ dotnet test
 - In-memory storage (no database)
 - Clean Architecture pattern
 - HashSet optimization for performance
+- xUnit for integration testing
 
 ## Design Principles
 
