@@ -30,7 +30,7 @@ public class HomeEndpointTests : IntegrationTestBase
     }
     
     [Fact]
-    public async Task GetAvailableHomes_ReturnsNotFound_WhenNoHomesExist()
+    public async Task GetAvailableHomes_ReturnsOkWithEmptyList_WhenNoHomesExist()
     {
         // Arrange
         var startDate = "2099-01-01";
@@ -41,13 +41,12 @@ public class HomeEndpointTests : IntegrationTestBase
         var response = await _client.GetAsync(url);
 
         // Assert
-        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
         var json = await response.Content.ReadAsStringAsync();
-        using var doc = JsonDocument.Parse(json);
-        var root = doc.RootElement;
+        var result = JsonSerializer.Deserialize<Response>(json);
 
-        Assert.Equal("NotFound", root.GetProperty("status").GetString());
-        Assert.Equal("No data found matching the specified criteria.", root.GetProperty("message").GetString());
+        Assert.Equal("OK", result!.Status);
+        Assert.Empty(result.Homes);
     }
 }

@@ -17,11 +17,7 @@ public static class HomeEndpoint
                     var homes = await service.GetAvailableHomes(startDate, endDate);
 
                     if (homes is null || !homes.Any())
-                        return Results.NotFound(new
-                        {
-                            status = nameof(HttpStatusCode.NotFound),
-                            message = "No data found matching the specified criteria."
-                        });
+                        Results.Ok(new HomeOutputModel(nameof(HttpStatusCode.OK), []));
 
                     return Results.Ok(new HomeOutputModel(nameof(HttpStatusCode.OK), homes));
                 })

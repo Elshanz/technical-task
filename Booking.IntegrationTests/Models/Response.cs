@@ -20,5 +20,5 @@ public class HomeResponse
     public string Name { get; set; }
 
     [JsonPropertyName("availableSlots")]
-    public List<DateTime> AvailableSlots { get; set; }
+    public HashSet<DateTime> AvailableSlots { get; set; }
 }
