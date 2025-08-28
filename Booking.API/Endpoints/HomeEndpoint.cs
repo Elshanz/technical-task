@@ -15,10 +15,6 @@ public static class HomeEndpoint
                 async (DateTime startDate, DateTime endDate, [FromServices] IHomeService service) =>
                 {
                     var homes = await service.GetAvailableHomes(startDate, endDate);
-
-                    if (homes is null || !homes.Any())
-                        Results.Ok(new HomeOutputModel(nameof(HttpStatusCode.OK), []));
-
                     return Results.Ok(new HomeOutputModel(nameof(HttpStatusCode.OK), homes));
                 })
             .WithTags(TagName)
