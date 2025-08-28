@@ -1,0 +1,30 @@
+# Build output
+bin/
+obj/
+out/
+
+# NuGet packages
+/packages/
+/*.nupkg
+*.snupkg
+
+# Rider / IntelliJ IDEA
+.idea/
+*.iml
+riderModule.iml
+
+# ReSharper
+_ReSharper.Caches/
+*.DotSettings.user
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
