@@ -31,8 +31,8 @@ GET /api/available-homes?startDate=2025-07-15&endDate=2025-07-16
   "status": "OK",
   "homes": [
     {
-      "homeId": "1",
-      "homeName": "Cozy Mountain Cabin",
+      "id": "1",
+      "name": "Cozy Mountain Cabin",
       "availableSlots": ["2025-07-15", "2025-07-16"]
     }
   ]
