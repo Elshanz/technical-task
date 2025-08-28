@@ -10,7 +10,7 @@ Clean Architecture with 4 layers:
 - **Domain**: Entities and interfaces
 - **Application**: Use cases and business logic  
 - **Infrastructure**: In-memory data storage
-- **API**: HTTP endpoints and controllers
+- **API**: Minimal API endpoints and request handling
 
 ## API Endpoint
 
