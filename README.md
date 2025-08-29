@@ -47,9 +47,8 @@ GET /api/available-homes?startDate=2025-07-15&endDate=2025-07-16
 
 ## How to Run
 
-1. Clone repository
+1. Clone the repository
 2. Run: `dotnet run --project Booking.API`
-3. Access: `https://localhost:44382/swagger`
 
 ## How to Test
 
